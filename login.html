@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <style>
+        * {
+            zoom: 110%;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(197, 129, 218);
+        }
+        input {
+            border: 2px solid rgb(167, 64, 167);
+        }
+    </style>
+    <title>Login</title>
+</head>
+<body style="background-color:rgb(87, 113, 172)">
+    <form action="{{url_for('login')}}" method="post">
+    <table style="border: 2px solid rgb(167, 64, 167);margin-left:auto;margin-right:auto;background-color: rgb(35, 51, 93);">
+        <tr>
+            <td>Login:</td>
+        <td><input type="text" name="login" id="login" alt="Login" style="background-color:rgb(55, 70, 105)"></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="password" id="password" alt="Password" style="background-color:rgb(55, 70, 105)"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="login" style="background-color:rgb(55, 70, 105)"></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

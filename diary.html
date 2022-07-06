@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            zoom: 110%;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(197, 129, 218);
+        }
+        input {
+            border: 2px solid rgb(167, 64, 167);
+        }
+        table, th, td{
+            border: 2px solid rgb(167, 64, 167);margin-left:auto;margin-right:auto;background-color: rgb(35, 51, 93);
+            border-collapse: collapse;
+        }
+        table{
+            table-layout: fixed;
+        }
+        td{
+            word-wrap:normal;
+            text-align: center;
+        }
+        input, textarea {
+            border: 2px solid rgb(167, 64, 167);
+            background-color:rgb(55, 70, 105)
+        }
+    </style>
+    <title>Tau's Diary</title>
+</head>
+<body style="background-color:rgb(87, 113, 172)">
+    <a href="/diary"><input type="button" value="Добавить"></a>
+    <table width="100%" style="border: 2px solid rgb(167, 64, 167);margin-left:auto;margin-right:auto;background-color: rgb(35, 51, 93);">
+    <col width="10%"/>
+    <col width="60%">
+    <col width="10%"/>
+    <col width="10%"/>
+    <col width="10%"/>
+    <tr>
+        <th>Заголовок</th>
+        <th>Текст</th>
+        <th>Настроение</th>
+        <th>Дата</th>
+        <th>Удалить?</th>
+    </tr>
+    {% for i in diary %}
+    <tr>
+        <td>{{i.title}}</td>
+        <td>{{i.text}}</td>
+        <td>{{i.mood}}</td>
+        <td>{{i.date}}</td>
+        <td><a href="/diary_delete/{{i.id}}" onclick="return confirm('Удалить запись \'{{i.title}}\'?')">Удалить?</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            zoom: 110%;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(197, 129, 218);
+        }
+        input, textarea {
+            border: 2px solid rgb(167, 64, 167);
+            background-color:rgb(55, 70, 105)
+        }
+    </style>
+    <title>Загрузка новой записи</title>
+</head>
+<body style="background-color:rgb(87, 113, 172)">
+    <b>{{err}}</b>
+<table style="border: 2px solid rgb(167, 64, 167);margin-left:auto;margin-right:auto;background-color: rgb(35, 51, 93);">
+    <form action="{{url_for('diary_upload')}}" method="post">
+        
+            <tr>
+                <td>Заголовок:</td>
+            <td><input type="text" name="title" id="title" ></td>
+            </tr>
+            <tr>
+                <td>Настроение:</td>
+                <td><input type="text" name="mood" id="mood"  ></td>
+            </tr>
+            <tr>
+                <td>Текст:</td>
+                <td><textarea name="text" id="text" rows="10" cols="40" ></textarea></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Загрузить" ></td>
+            
+        
+        
+    </form>
+    <td><a href="/"><input type="button" value="Мой дневник"></a></td>    
+</tr>
+
+</table>
+</body>
+</html>
