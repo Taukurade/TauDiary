@@ -51,7 +51,7 @@ async def diary_upload():
             mood = data['mood']
             text = data['text']
         except KeyError:
-            return await render_template('admin.html',err='Какое-то из полей не было заполнено.')
+            return await render_template('admin.html',err='Something is empty.')
         
         Diary.create(title=title, mood=mood,text=text)
 
